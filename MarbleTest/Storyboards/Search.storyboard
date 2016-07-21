@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UK0-64-dpt">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="7PQ-dI-ior">
+            <objects>
+                <viewController id="Vd5-yM-EFh" customClass="SearchViewController" customModule="MarbleTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aVP-cY-501"/>
+                        <viewControllerLayoutGuide type="bottom" id="xt3-Gb-RCE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uf1-mz-V42">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EaD-Nw-GhI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhu-Mw-Fen" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1479" y="165"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="EZ7-vM-UoU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UK0-64-dpt" customClass="SearchContainerController" customModule="MarbleTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="v2o-ef-TgX"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Osv-lA-G3A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vd5-yM-EFh" kind="relationship" relationship="rootViewController" id="lp1-Tg-tRf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRw-JQ-FQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="165"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="search" width="32" height="32"/>
+    </resources>
+</document>
