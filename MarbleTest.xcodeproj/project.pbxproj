@@ -28,6 +28,19 @@
 		255EBD5A1D1F9D8400D45A89 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255EBD591D1F9D8400D45A89 /* ArticleViewController.swift */; };
 		255EBD5C1D1F9FF500D45A89 /* APIUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255EBD5B1D1F9FF500D45A89 /* APIUrl.swift */; };
 		255EBD5E1D1FA0D800D45A89 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255EBD5D1D1FA0D800D45A89 /* APIManager.swift */; };
+		256065AF1D40A04A005EC41C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256065AE1D40A04A005EC41C /* MainTabBarController.swift */; };
+		256065B11D40A081005EC41C /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256065B01D40A081005EC41C /* Article.storyboard */; };
+		256065B31D40A17B005EC41C /* ArticleContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256065B21D40A17B005EC41C /* ArticleContainerController.swift */; };
+		256065B71D40AF18005EC41C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256065B61D40AF18005EC41C /* NavigationViewController.swift */; };
+		256065B91D40B1A6005EC41C /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256065B81D40B1A6005EC41C /* MyPage.storyboard */; };
+		256065BB1D40B1DF005EC41C /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256065BA1D40B1DF005EC41C /* MyPageViewController.swift */; };
+		256065BD1D40B274005EC41C /* MyPageContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256065BC1D40B274005EC41C /* MyPageContainerController.swift */; };
+		256065BF1D40B40F005EC41C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256065BE1D40B40F005EC41C /* Search.storyboard */; };
+		256065C11D40B45F005EC41C /* SearchContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256065C01D40B45F005EC41C /* SearchContainerController.swift */; };
+		256065C31D40B47B005EC41C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256065C21D40B47B005EC41C /* SearchViewController.swift */; };
+		256065C51D40B57A005EC41C /* Like.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256065C41D40B57A005EC41C /* Like.storyboard */; };
+		256065C71D40B5A7005EC41C /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256065C61D40B5A7005EC41C /* LikeViewController.swift */; };
+		256065C91D40B5CE005EC41C /* LikeContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256065C81D40B5CE005EC41C /* LikeContainerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +67,19 @@
 		255EBD591D1F9D8400D45A89 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		255EBD5B1D1F9FF500D45A89 /* APIUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUrl.swift; sourceTree = "<group>"; };
 		255EBD5D1D1FA0D800D45A89 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		256065AE1D40A04A005EC41C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = ViewController/MainTabBarController.swift; sourceTree = "<group>"; };
+		256065B01D40A081005EC41C /* Article.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Article.storyboard; path = Storyboards/Article.storyboard; sourceTree = "<group>"; };
+		256065B21D40A17B005EC41C /* ArticleContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleContainerController.swift; path = ViewController/ArticleContainerController.swift; sourceTree = "<group>"; };
+		256065B61D40AF18005EC41C /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationViewController.swift; path = ViewController/NavigationViewController.swift; sourceTree = "<group>"; };
+		256065B81D40B1A6005EC41C /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MyPage.storyboard; path = Storyboards/MyPage.storyboard; sourceTree = "<group>"; };
+		256065BA1D40B1DF005EC41C /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageViewController.swift; path = ViewController/MyPageViewController.swift; sourceTree = "<group>"; };
+		256065BC1D40B274005EC41C /* MyPageContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageContainerController.swift; path = ViewController/MyPageContainerController.swift; sourceTree = "<group>"; };
+		256065BE1D40B40F005EC41C /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Search.storyboard; path = Storyboards/Search.storyboard; sourceTree = "<group>"; };
+		256065C01D40B45F005EC41C /* SearchContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchContainerController.swift; path = ViewController/SearchContainerController.swift; sourceTree = "<group>"; };
+		256065C21D40B47B005EC41C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ViewController/SearchViewController.swift; sourceTree = "<group>"; };
+		256065C41D40B57A005EC41C /* Like.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Like.storyboard; path = Storyboards/Like.storyboard; sourceTree = "<group>"; };
+		256065C61D40B5A7005EC41C /* LikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeViewController.swift; path = ViewController/LikeViewController.swift; sourceTree = "<group>"; };
+		256065C81D40B5CE005EC41C /* LikeContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeContainerController.swift; path = ViewController/LikeContainerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +129,25 @@
 				255EBD321D1F801000D45A89 /* ViewController.swift */,
 				255EBD571D1F9C8E00D45A89 /* ArticleDetailViewController.swift */,
 				255EBD591D1F9D8400D45A89 /* ArticleViewController.swift */,
+				256065B21D40A17B005EC41C /* ArticleContainerController.swift */,
+				256065BC1D40B274005EC41C /* MyPageContainerController.swift */,
+				256065C01D40B45F005EC41C /* SearchContainerController.swift */,
+				256065BA1D40B1DF005EC41C /* MyPageViewController.swift */,
+				256065C81D40B5CE005EC41C /* LikeContainerController.swift */,
+				256065B61D40AF18005EC41C /* NavigationViewController.swift */,
+				256065C61D40B5A7005EC41C /* LikeViewController.swift */,
 				255EBD4F1D1F9BB500D45A89 /* User.swift */,
 				250E0A971D25143B005F6130 /* ArticleDetail.storyboard */,
+				256065AE1D40A04A005EC41C /* MainTabBarController.swift */,
 				255EBD551D1F9C3F00D45A89 /* ArticleViewModel.swift */,
+				256065C21D40B47B005EC41C /* SearchViewController.swift */,
 				255EBD5D1D1FA0D800D45A89 /* APIManager.swift */,
 				255EBD5B1D1F9FF500D45A89 /* APIUrl.swift */,
 				255EBD341D1F801000D45A89 /* Main.storyboard */,
+				256065B01D40A081005EC41C /* Article.storyboard */,
+				256065C41D40B57A005EC41C /* Like.storyboard */,
+				256065B81D40B1A6005EC41C /* MyPage.storyboard */,
+				256065BE1D40B40F005EC41C /* Search.storyboard */,
 				255EBD371D1F801000D45A89 /* Assets.xcassets */,
 				255EBD391D1F801000D45A89 /* LaunchScreen.storyboard */,
 				255EBD3C1D1F801000D45A89 /* Info.plist */,
@@ -176,9 +215,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				250E0A921D2293DF005F6130 /* ArticleCell.xib in Resources */,
+				256065B11D40A081005EC41C /* Article.storyboard in Resources */,
 				255EBD3B1D1F801000D45A89 /* LaunchScreen.storyboard in Resources */,
 				250E0A981D25143B005F6130 /* ArticleDetail.storyboard in Resources */,
+				256065B91D40B1A6005EC41C /* MyPage.storyboard in Resources */,
 				255EBD381D1F801000D45A89 /* Assets.xcassets in Resources */,
+				256065C51D40B57A005EC41C /* Like.storyboard in Resources */,
+				256065BF1D40B40F005EC41C /* Search.storyboard in Resources */,
 				255EBD361D1F801000D45A89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,15 +256,24 @@
 				255EBD541D1F9BF700D45A89 /* Article.swift in Sources */,
 				255EBD5E1D1FA0D800D45A89 /* APIManager.swift in Sources */,
 				255EBD501D1F9BB500D45A89 /* User.swift in Sources */,
+				256065B71D40AF18005EC41C /* NavigationViewController.swift in Sources */,
+				256065C31D40B47B005EC41C /* SearchViewController.swift in Sources */,
 				255EBD5A1D1F9D8400D45A89 /* ArticleViewController.swift in Sources */,
+				256065C11D40B45F005EC41C /* SearchContainerController.swift in Sources */,
 				255EBD581D1F9C8E00D45A89 /* ArticleDetailViewController.swift in Sources */,
 				250E0A901D21215B005F6130 /* Utils.swift in Sources */,
+				256065BB1D40B1DF005EC41C /* MyPageViewController.swift in Sources */,
 				255EBD5C1D1F9FF500D45A89 /* APIUrl.swift in Sources */,
+				256065B31D40A17B005EC41C /* ArticleContainerController.swift in Sources */,
+				256065AF1D40A04A005EC41C /* MainTabBarController.swift in Sources */,
+				256065C91D40B5CE005EC41C /* LikeContainerController.swift in Sources */,
 				255EBD331D1F801000D45A89 /* ViewController.swift in Sources */,
 				250E0A961D229B67005F6130 /* Extentions.swift in Sources */,
+				256065BD1D40B274005EC41C /* MyPageContainerController.swift in Sources */,
 				255EBD561D1F9C3F00D45A89 /* ArticleViewModel.swift in Sources */,
 				255EBD311D1F801000D45A89 /* AppDelegate.swift in Sources */,
 				250E0A941D229696005F6130 /* ArticleCell.swift in Sources */,
+				256065C71D40B5A7005EC41C /* LikeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
