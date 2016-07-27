@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import WebImage
 
 class ArticleDetailViewController: UIViewController {
 

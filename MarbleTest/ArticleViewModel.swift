@@ -13,6 +13,7 @@ import Alamofire
 
 class ArticleViewModel: NSObject {
     
+    var articles: [Article]?
 //    var articles: [[String: String?]] = []
 //    let table = UITableView()
 //    var max: Int = 0
@@ -21,13 +22,16 @@ class ArticleViewModel: NSObject {
     func fetchArticleList(params: [String: AnyObject]) -> Future<(Int,[Article]), NSError>  {
         let serializer = ArticleSerializer()
         let url = APIUrl.articleList
-        
-        
         return apiManager.get(url, params: params, serializer: serializer)
-    
-        
-        
     }
     
+    private func mergeArticles(articles: [Article]) -> [Article] {
+        if let _ = self.articles {
+            let newArticles = self.articles! + articles
+            return newArticles
+        } else {
+            return articles
+        }
+    }
     
 }

@@ -12,6 +12,7 @@
 		250E0A941D229696005F6130 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250E0A931D229696005F6130 /* ArticleCell.swift */; };
 		250E0A961D229B67005F6130 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250E0A951D229B67005F6130 /* Extentions.swift */; };
 		250E0A981D25143B005F6130 /* ArticleDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250E0A971D25143B005F6130 /* ArticleDetail.storyboard */; };
+		251612DB1D47565B007B8EDD /* PullAndInfiniteTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251612DA1D47565B007B8EDD /* PullAndInfiniteTableView.framework */; };
 		255EBD311D1F801000D45A89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255EBD301D1F801000D45A89 /* AppDelegate.swift */; };
 		255EBD331D1F801000D45A89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255EBD321D1F801000D45A89 /* ViewController.swift */; };
 		255EBD361D1F801000D45A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255EBD341D1F801000D45A89 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		256065C51D40B57A005EC41C /* Like.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256065C41D40B57A005EC41C /* Like.storyboard */; };
 		256065C71D40B5A7005EC41C /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256065C61D40B5A7005EC41C /* LikeViewController.swift */; };
 		256065C91D40B5CE005EC41C /* LikeContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256065C81D40B5CE005EC41C /* LikeContainerController.swift */; };
+		256065CD1D43044B005EC41C /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256065CC1D43044B005EC41C /* WebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,7 @@
 		250E0A931D229696005F6130 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		250E0A951D229B67005F6130 /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		250E0A971D25143B005F6130 /* ArticleDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ArticleDetail.storyboard; sourceTree = "<group>"; };
+		251612DA1D47565B007B8EDD /* PullAndInfiniteTableView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PullAndInfiniteTableView.framework; path = Carthage/Build/iOS/PullAndInfiniteTableView.framework; sourceTree = "<group>"; };
 		255EBD2D1D1F801000D45A89 /* MarbleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarbleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		255EBD301D1F801000D45A89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		255EBD321D1F801000D45A89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		256065C41D40B57A005EC41C /* Like.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Like.storyboard; path = Storyboards/Like.storyboard; sourceTree = "<group>"; };
 		256065C61D40B5A7005EC41C /* LikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeViewController.swift; path = ViewController/LikeViewController.swift; sourceTree = "<group>"; };
 		256065C81D40B5CE005EC41C /* LikeContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeContainerController.swift; path = ViewController/LikeContainerController.swift; sourceTree = "<group>"; };
+		256065CC1D43044B005EC41C /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				251612DB1D47565B007B8EDD /* PullAndInfiniteTableView.framework in Frameworks */,
+				256065CD1D43044B005EC41C /* WebImage.framework in Frameworks */,
 				255EBD4A1D1F99EA00D45A89 /* Result.framework in Frameworks */,
 				255EBD481D1F99D700D45A89 /* BrightFutures.framework in Frameworks */,
 				255EBD451D1F97F400D45A89 /* SwiftyJSON.framework in Frameworks */,
@@ -100,6 +106,8 @@
 		255EBD241D1F800F00D45A89 = {
 			isa = PBXGroup;
 			children = (
+				251612DA1D47565B007B8EDD /* PullAndInfiniteTableView.framework */,
+				256065CC1D43044B005EC41C /* WebImage.framework */,
 				255EBD491D1F99EA00D45A89 /* Result.framework */,
 				255EBD471D1F99D700D45A89 /* BrightFutures.framework */,
 				255EBD441D1F97F300D45A89 /* SwiftyJSON.framework */,
@@ -239,6 +247,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PullAndInfiniteTableView.framework",
 			);
 			outputPaths = (
 			);

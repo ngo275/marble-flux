@@ -9,40 +9,29 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import PullAndInfiniteTableView
 
-class ArticleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ArticleViewController: UIViewController {
     
     private let viewmodel = ArticleViewModel()
     private let apiManager: APIManager = APIManager.sharedInstance
-    private var articles: [Article]?
+    private var articles: [Article]? {
+        get {
+            return viewmodel.articles
+        }
+        set(newValue) {
+            viewmodel.articles = newValue
+        }
+    }
     
-    @IBOutlet weak var tableView: UITableView!
-    
+//    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: PullAndInfiniteTableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "MARBLE"
         
-        let params: [String: AnyObject] = [
-            "search_type": "category",
-            "limit": 30,
-//            "category_id": categoryId
-        ]
-        viewmodel.fetchArticleList(params)
-            .onSuccess { [weak self] data in
-                self?.articles = data.1
-                self?.tableView.reloadData()
-            }
-            .onFailure { [weak self] error in
-                self?.showErrorAlert(error.localizedDescription, completion: nil)
-        }
-        
-        tableView.registerNib(UINib(nibName: "ArticleCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
-//        tableView.dataSource = self
-//        tableView.delegate = self
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 105.0
-//        self.view.addSubview(tableView)
+        load()
+        initTableView()
         
     }
 
@@ -61,31 +50,38 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
         presentViewController(alert, animated: true, completion: nil)
     }
     
-    
-    // tableCellの数を返すだけのためのメソッド
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articles?.count ?? 0
-    }
-    
-    // cellの描画をするためのメソッド
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: ArticleCell = tableView.dequeueReusableCellWithIdentifier("ArticleCell") as! ArticleCell
-        cell.setCell(articles![indexPath.row])
-        return cell
-    }
-    
-    // cellを選択された時のアクション
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "ArticleDetail", bundle: nil)
-        if let next: ArticleDetailViewController = storyboard.instantiateViewControllerWithIdentifier("ArticleDetail") as? ArticleDetailViewController {
-            next.article = articles![indexPath.row]
-            navigationController?.pushViewController(next, animated: true)
+    // initial loading when this app is opend
+    private func load() {
+        let params: [String: AnyObject] = [
+            "search_type": "category",
+            "limit": 10,
+            //            "category_id": categoryId
+        ]
+        viewmodel.fetchArticleList(params)
+            .onSuccess { [weak self] data in
+                self?.articles = data.1
+                self?.tableView.reloadData()
+            }
+            .onFailure { [weak self] error in
+                self?.showErrorAlert(error.localizedDescription, completion: nil)
         }
     }
     
-    
+    private func initTableView() {
+        tableView.registerNib(UINib(nibName: "ArticleCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
+        // dataSource and delegate are connected to this class in the storyboard.
+        // tableView.dataSource = self
+        // tableView.delegate = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 105.0
+//        tableView.showPullToRefresh = true
+//        tableView.addInfiniteScrollHandler { [weak self] in
+//            self?.load()
+//        }
 
-    /*
+    }
+
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -94,5 +90,28 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
+extension ArticleViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    // return the number of tableCells
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return articles?.count ?? 0
+    }
+    // draw the tableCells
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: ArticleCell = tableView.dequeueReusableCellWithIdentifier("ArticleCell") as! ArticleCell
+        cell.setCell(articles![indexPath.row])
+        return cell
+    }
+    // action when a cell is tapped
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "ArticleDetail", bundle: nil)
+        if let next: ArticleDetailViewController = storyboard.instantiateViewControllerWithIdentifier("ArticleDetail") as? ArticleDetailViewController {
+            next.article = articles![indexPath.row]
+            navigationController?.pushViewController(next, animated: true)
+        }
+    }
+}
+
+
