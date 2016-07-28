@@ -25,15 +25,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEm-QU-uSw">
-                                <rect key="frame" x="285" y="507" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEm-QU-uSw">
+                                <rect key="frame" x="120" y="520" width="360" height="30"/>
                                 <state key="normal" title="like"/>
+                                <connections>
+                                    <action selector="like:" destination="nbs-FY-8j4" eventType="touchUpInside" id="ith-jn-9gN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VPa-Us-mxC" firstAttribute="top" secondItem="k60-RG-hfm" secondAttribute="bottom" id="4gd-xp-9cc"/>
+                            <constraint firstItem="WEm-QU-uSw" firstAttribute="leading" secondItem="qKb-5Z-G2T" secondAttribute="leadingMargin" constant="100" id="LQv-AP-0ip"/>
                             <constraint firstItem="WGv-tO-FnE" firstAttribute="top" secondItem="VPa-Us-mxC" secondAttribute="bottom" constant="170" id="Lsf-U2-1b5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WEm-QU-uSw" secondAttribute="trailing" constant="100" id="RUV-mC-hhc"/>
+                            <constraint firstItem="WGv-tO-FnE" firstAttribute="top" secondItem="WEm-QU-uSw" secondAttribute="bottom" constant="50" id="VyF-I8-7BV"/>
                             <constraint firstItem="VPa-Us-mxC" firstAttribute="leading" secondItem="qKb-5Z-G2T" secondAttribute="leadingMargin" id="Z9Q-Oq-ubG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VPa-Us-mxC" secondAttribute="trailing" id="b7s-jj-ACB"/>
                         </constraints>

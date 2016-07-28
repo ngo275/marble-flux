@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import SwiftyJSON
+import RealmSwift
 
 class LikeViewController: UIViewController {
-
+    
+    let apiManager: APIManager = APIManager.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        let articles = LikesUtils.list(0, limit: 20).map {Article(json: $0)}
+        print(articles)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

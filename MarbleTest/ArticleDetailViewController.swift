@@ -18,6 +18,18 @@ class ArticleDetailViewController: UIViewController {
     
     @IBOutlet weak var articleBody: UITextView!
     
+    @IBAction func like(sender: UIButton) {
+        let like = !LikesUtils.isLike(Int32(article!.id))
+        if like {
+            // when the article's not liked yet.
+            LikesUtils.like(Int32(article!.id), data: article!.toJson())
+            print("Like: \(article!.id)")
+        } else {
+            // when the article's liked already.
+            LikesUtils.unlike(Int32(article!.id))
+            print("Unlike: \(article!.id)")
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
