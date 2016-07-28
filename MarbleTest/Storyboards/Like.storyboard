@@ -8,7 +8,7 @@
         <!--Like View Controller-->
         <scene sceneID="5Pb-Rj-aWq">
             <objects>
-                <viewController id="rdw-vk-ZRl" customClass="LikeViewController" customModule="MarbleTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="rdw-vk-ZRl" customClass="LikeViewController" customModule="MarbleTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ovH-Tx-LKl"/>
                         <viewControllerLayoutGuide type="bottom" id="6oy-si-IVb"/>
@@ -16,9 +16,38 @@
                     <view key="view" contentMode="scaleToFill" id="X5e-aL-A70">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mWT-BG-oaR">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xJL-0E-CvY" customClass="ArticleCell" customModule="MarbleTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xJL-0E-CvY" id="y8m-EX-SjA">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rdw-vk-ZRl" id="OJw-6c-yQj"/>
+                                    <outlet property="delegate" destination="rdw-vk-ZRl" id="aFX-Ab-bwX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mWT-BG-oaR" secondAttribute="trailing" id="G8l-iD-jkr"/>
+                            <constraint firstItem="6oy-si-IVb" firstAttribute="top" secondItem="mWT-BG-oaR" secondAttribute="bottom" id="hd5-Dk-AiX"/>
+                            <constraint firstItem="mWT-BG-oaR" firstAttribute="top" secondItem="ovH-Tx-LKl" secondAttribute="bottom" id="wIx-MB-ylR"/>
+                            <constraint firstItem="mWT-BG-oaR" firstAttribute="leading" secondItem="X5e-aL-A70" secondAttribute="leading" id="zFp-yL-qeo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bsY-Kb-pe8"/>
+                    <connections>
+                        <outlet property="tableView" destination="mWT-BG-oaR" id="y7Z-DD-IIu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N67-ag-eXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
