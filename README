@@ -1,0 +1,2 @@
+Alamofireを利用してJsonで取得した値をSwiftObjectに変換してMVVMで書いた。
+お気に入り機能をrealmで実装
