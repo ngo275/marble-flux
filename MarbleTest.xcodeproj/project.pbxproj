@@ -113,6 +113,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		254CBDF21D51F5E80083DC41 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				255EBD571D1F9C8E00D45A89 /* ArticleDetailViewController.swift */,
+				256065BA1D40B1DF005EC41C /* MyPageViewController.swift */,
+				255EBD321D1F801000D45A89 /* ViewController.swift */,
+				256065C21D40B47B005EC41C /* SearchViewController.swift */,
+				255EBD591D1F9D8400D45A89 /* ArticleViewController.swift */,
+				256065C61D40B5A7005EC41C /* LikeViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		254CBDF31D51F61D0083DC41 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				255EBD341D1F801000D45A89 /* Main.storyboard */,
+				256065C41D40B57A005EC41C /* Like.storyboard */,
+				256065BE1D40B40F005EC41C /* Search.storyboard */,
+				256065B81D40B1A6005EC41C /* MyPage.storyboard */,
+				256065B01D40A081005EC41C /* Article.storyboard */,
+				250E0A971D25143B005F6130 /* ArticleDetail.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		254CBDF41D51F64E0083DC41 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				250E0A911D2293DF005F6130 /* ArticleCell.xib */,
+				250E0A931D229696005F6130 /* ArticleCell.swift */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		254CBDF51D51F66C0083DC41 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				251612DC1D48B21B007B8EDD /* LikesUtils.swift */,
+				255EBD5D1D1FA0D800D45A89 /* APIManager.swift */,
+				255EBD5B1D1F9FF500D45A89 /* APIUrl.swift */,
+				250E0A951D229B67005F6130 /* Extentions.swift */,
+				250E0A8F1D21215B005F6130 /* Utils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		254CBDF61D51F6C40083DC41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				251612DE1D48B36D007B8EDD /* Likes.swift */,
+				255EBD4F1D1F9BB500D45A89 /* User.swift */,
+				255EBD531D1F9BF700D45A89 /* Article.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		254CBDF71D51F6DD0083DC41 /* ContainerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				256065B21D40A17B005EC41C /* ArticleContainerController.swift */,
+				256065BC1D40B274005EC41C /* MyPageContainerController.swift */,
+				256065C81D40B5CE005EC41C /* LikeContainerController.swift */,
+				256065B61D40AF18005EC41C /* NavigationViewController.swift */,
+				256065AE1D40A04A005EC41C /* MainTabBarController.swift */,
+				256065C01D40B45F005EC41C /* SearchContainerController.swift */,
+			);
+			name = ContainerViewController;
+			sourceTree = "<group>";
+		};
+		254CBDF81D51F75C0083DC41 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				255EBD551D1F9C3F00D45A89 /* ArticleViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		255EBD241D1F800F00D45A89 = {
 			isa = PBXGroup;
 			children = (
@@ -141,35 +219,13 @@
 			isa = PBXGroup;
 			children = (
 				255EBD301D1F801000D45A89 /* AppDelegate.swift */,
-				255EBD531D1F9BF700D45A89 /* Article.swift */,
-				251612DE1D48B36D007B8EDD /* Likes.swift */,
-				251612DC1D48B21B007B8EDD /* LikesUtils.swift */,
-				250E0A8F1D21215B005F6130 /* Utils.swift */,
-				250E0A951D229B67005F6130 /* Extentions.swift */,
-				250E0A911D2293DF005F6130 /* ArticleCell.xib */,
-				250E0A931D229696005F6130 /* ArticleCell.swift */,
-				255EBD321D1F801000D45A89 /* ViewController.swift */,
-				255EBD571D1F9C8E00D45A89 /* ArticleDetailViewController.swift */,
-				255EBD591D1F9D8400D45A89 /* ArticleViewController.swift */,
-				256065B21D40A17B005EC41C /* ArticleContainerController.swift */,
-				256065BC1D40B274005EC41C /* MyPageContainerController.swift */,
-				256065C01D40B45F005EC41C /* SearchContainerController.swift */,
-				256065BA1D40B1DF005EC41C /* MyPageViewController.swift */,
-				256065C81D40B5CE005EC41C /* LikeContainerController.swift */,
-				256065B61D40AF18005EC41C /* NavigationViewController.swift */,
-				256065C61D40B5A7005EC41C /* LikeViewController.swift */,
-				255EBD4F1D1F9BB500D45A89 /* User.swift */,
-				250E0A971D25143B005F6130 /* ArticleDetail.storyboard */,
-				256065AE1D40A04A005EC41C /* MainTabBarController.swift */,
-				255EBD551D1F9C3F00D45A89 /* ArticleViewModel.swift */,
-				256065C21D40B47B005EC41C /* SearchViewController.swift */,
-				255EBD5D1D1FA0D800D45A89 /* APIManager.swift */,
-				255EBD5B1D1F9FF500D45A89 /* APIUrl.swift */,
-				255EBD341D1F801000D45A89 /* Main.storyboard */,
-				256065B01D40A081005EC41C /* Article.storyboard */,
-				256065C41D40B57A005EC41C /* Like.storyboard */,
-				256065B81D40B1A6005EC41C /* MyPage.storyboard */,
-				256065BE1D40B40F005EC41C /* Search.storyboard */,
+				254CBDF61D51F6C40083DC41 /* Model */,
+				254CBDF21D51F5E80083DC41 /* ViewController */,
+				254CBDF41D51F64E0083DC41 /* TableViewCell */,
+				254CBDF51D51F66C0083DC41 /* Utils */,
+				254CBDF31D51F61D0083DC41 /* Storyboard */,
+				254CBDF71D51F6DD0083DC41 /* ContainerViewController */,
+				254CBDF81D51F75C0083DC41 /* ViewModel */,
 				255EBD371D1F801000D45A89 /* Assets.xcassets */,
 				255EBD391D1F801000D45A89 /* LaunchScreen.storyboard */,
 				255EBD3C1D1F801000D45A89 /* Info.plist */,
