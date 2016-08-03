@@ -32,7 +32,7 @@ class ArticleCell: UITableViewCell {
         self.title.text = article.title
         self.date.text = String(article.modified)
         self.user.text = article.userData.userName
-        self.dexcription.text = article.body
+        self.dexcription.text = ""
         if let thumbnailUrl: String = article.thumb {
             if let data = NSData(contentsOfURL: NSURL(string: thumbnailUrl)!) {
                 self.thumbnail.image = UIImage(data: data)
