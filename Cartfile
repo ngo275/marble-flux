@@ -4,3 +4,4 @@ github "Thomvis/BrightFutures"
 github "rs/SDWebImage"
 github "roana0229/PullAndInfiniteTableView" >= 1.0
 github "realm/realm-cocoa"
+github "ReSwift/ReSwift"

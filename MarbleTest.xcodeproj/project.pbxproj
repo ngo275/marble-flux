@@ -17,6 +17,7 @@
 		251612DF1D48B36D007B8EDD /* Likes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251612DE1D48B36D007B8EDD /* Likes.swift */; };
 		251612E11D48B80B007B8EDD /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251612E01D48B80B007B8EDD /* Realm.framework */; };
 		251612E31D48B81E007B8EDD /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251612E21D48B81E007B8EDD /* RealmSwift.framework */; };
+		254AB7821D544EAC003C8345 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254AB7811D544EAC003C8345 /* ReSwift.framework */; };
 		254CBDFC1D522D7F0083DC41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254CBDFB1D522D7F0083DC41 /* Main.storyboard */; };
 		255EBD311D1F801000D45A89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255EBD301D1F801000D45A89 /* AppDelegate.swift */; };
 		255EBD331D1F801000D45A89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255EBD321D1F801000D45A89 /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		251612DE1D48B36D007B8EDD /* Likes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Likes.swift; path = Model/Likes.swift; sourceTree = "<group>"; };
 		251612E01D48B80B007B8EDD /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		251612E21D48B81E007B8EDD /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		254AB7811D544EAC003C8345 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		254CBDFB1D522D7F0083DC41 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		255EBD2D1D1F801000D45A89 /* MarbleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarbleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		255EBD301D1F801000D45A89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254AB7821D544EAC003C8345 /* ReSwift.framework in Frameworks */,
 				251612E31D48B81E007B8EDD /* RealmSwift.framework in Frameworks */,
 				251612E11D48B80B007B8EDD /* Realm.framework in Frameworks */,
 				251612DB1D47565B007B8EDD /* PullAndInfiniteTableView.framework in Frameworks */,
@@ -194,6 +197,7 @@
 		255EBD241D1F800F00D45A89 = {
 			isa = PBXGroup;
 			children = (
+				254AB7811D544EAC003C8345 /* ReSwift.framework */,
 				251612E21D48B81E007B8EDD /* RealmSwift.framework */,
 				251612E01D48B80B007B8EDD /* Realm.framework */,
 				251612DA1D47565B007B8EDD /* PullAndInfiniteTableView.framework */,
@@ -321,6 +325,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/PullAndInfiniteTableView.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
 			);
 			outputPaths = (
 			);
