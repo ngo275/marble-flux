@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import PullAndInfiniteTableView
+import ReSwift
 
 class ArticleViewController: UIViewController {
     

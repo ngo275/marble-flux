@@ -18,6 +18,14 @@
 		251612E11D48B80B007B8EDD /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251612E01D48B80B007B8EDD /* Realm.framework */; };
 		251612E31D48B81E007B8EDD /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251612E21D48B81E007B8EDD /* RealmSwift.framework */; };
 		254AB7821D544EAC003C8345 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254AB7811D544EAC003C8345 /* ReSwift.framework */; };
+		254AB78B1D545847003C8345 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB78A1D545847003C8345 /* AppState.swift */; };
+		254AB78D1D5458DA003C8345 /* StoreCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB78C1D5458DA003C8345 /* StoreCreator.swift */; };
+		254AB78F1D545B94003C8345 /* TimelineAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB78E1D545B94003C8345 /* TimelineAction.swift */; };
+		254AB7911D545BFA003C8345 /* ArticlesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB7901D545BFA003C8345 /* ArticlesReducer.swift */; };
+		254AB7951D5494F6003C8345 /* ArticlesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB7941D5494F6003C8345 /* ArticlesAction.swift */; };
+		254AB7971D549620003C8345 /* MarbleAPIReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB7961D549620003C8345 /* MarbleAPIReducer.swift */; };
+		254AB7991D549654003C8345 /* ArticlesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB7981D549654003C8345 /* ArticlesState.swift */; };
+		254AB79B1D55752E003C8345 /* FetchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB79A1D55752E003C8345 /* FetchStatus.swift */; };
 		254CBDFC1D522D7F0083DC41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254CBDFB1D522D7F0083DC41 /* Main.storyboard */; };
 		255EBD311D1F801000D45A89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255EBD301D1F801000D45A89 /* AppDelegate.swift */; };
 		255EBD331D1F801000D45A89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255EBD321D1F801000D45A89 /* ViewController.swift */; };
@@ -62,6 +70,14 @@
 		251612E01D48B80B007B8EDD /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		251612E21D48B81E007B8EDD /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		254AB7811D544EAC003C8345 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		254AB78A1D545847003C8345 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		254AB78C1D5458DA003C8345 /* StoreCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCreator.swift; sourceTree = "<group>"; };
+		254AB78E1D545B94003C8345 /* TimelineAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineAction.swift; sourceTree = "<group>"; };
+		254AB7901D545BFA003C8345 /* ArticlesReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesReducer.swift; sourceTree = "<group>"; };
+		254AB7941D5494F6003C8345 /* ArticlesAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesAction.swift; sourceTree = "<group>"; };
+		254AB7961D549620003C8345 /* MarbleAPIReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarbleAPIReducer.swift; sourceTree = "<group>"; };
+		254AB7981D549654003C8345 /* ArticlesState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesState.swift; sourceTree = "<group>"; };
+		254AB79A1D55752E003C8345 /* FetchStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchStatus.swift; sourceTree = "<group>"; };
 		254CBDFB1D522D7F0083DC41 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		255EBD2D1D1F801000D45A89 /* MarbleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarbleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		255EBD301D1F801000D45A89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +132,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		254AB7851D5456AC003C8345 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				254AB7891D5457B2003C8345 /* States */,
+				254AB7871D5456F6003C8345 /* Reducers */,
+				254AB7861D5456E8003C8345 /* Actions */,
+				254AB78C1D5458DA003C8345 /* StoreCreator.swift */,
+			);
+			name = Redux;
+			sourceTree = "<group>";
+		};
+		254AB7861D5456E8003C8345 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				254AB78E1D545B94003C8345 /* TimelineAction.swift */,
+				254AB7941D5494F6003C8345 /* ArticlesAction.swift */,
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
+		254AB7871D5456F6003C8345 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				254AB7901D545BFA003C8345 /* ArticlesReducer.swift */,
+				254AB7961D549620003C8345 /* MarbleAPIReducer.swift */,
+			);
+			name = Reducers;
+			sourceTree = "<group>";
+		};
+		254AB7891D5457B2003C8345 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				254AB78A1D545847003C8345 /* AppState.swift */,
+				254AB7981D549654003C8345 /* ArticlesState.swift */,
+				254AB79A1D55752E003C8345 /* FetchStatus.swift */,
+			);
+			name = States;
+			sourceTree = "<group>";
+		};
 		254CBDF21D51F5E80083DC41 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				255EBD301D1F801000D45A89 /* AppDelegate.swift */,
+				254AB7851D5456AC003C8345 /* Redux */,
 				254CBDF61D51F6C40083DC41 /* Model */,
 				254CBDF21D51F5E80083DC41 /* ViewController */,
 				254CBDF41D51F64E0083DC41 /* TableViewCell */,
@@ -340,9 +396,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254AB78D1D5458DA003C8345 /* StoreCreator.swift in Sources */,
 				255EBD541D1F9BF700D45A89 /* Article.swift in Sources */,
+				254AB78F1D545B94003C8345 /* TimelineAction.swift in Sources */,
 				255EBD5E1D1FA0D800D45A89 /* APIManager.swift in Sources */,
 				255EBD501D1F9BB500D45A89 /* User.swift in Sources */,
+				254AB78B1D545847003C8345 /* AppState.swift in Sources */,
 				256065B71D40AF18005EC41C /* NavigationViewController.swift in Sources */,
 				256065C31D40B47B005EC41C /* SearchViewController.swift in Sources */,
 				255EBD5A1D1F9D8400D45A89 /* ArticleViewController.swift in Sources */,
@@ -352,13 +411,18 @@
 				256065BB1D40B1DF005EC41C /* MyPageViewController.swift in Sources */,
 				255EBD5C1D1F9FF500D45A89 /* APIUrl.swift in Sources */,
 				256065B31D40A17B005EC41C /* ArticleContainerController.swift in Sources */,
+				254AB7991D549654003C8345 /* ArticlesState.swift in Sources */,
 				251612DD1D48B21B007B8EDD /* LikesUtils.swift in Sources */,
 				256065AF1D40A04A005EC41C /* MainTabBarController.swift in Sources */,
 				256065C91D40B5CE005EC41C /* LikeContainerController.swift in Sources */,
+				254AB7951D5494F6003C8345 /* ArticlesAction.swift in Sources */,
 				255EBD331D1F801000D45A89 /* ViewController.swift in Sources */,
 				250E0A961D229B67005F6130 /* Extentions.swift in Sources */,
+				254AB79B1D55752E003C8345 /* FetchStatus.swift in Sources */,
 				251612DF1D48B36D007B8EDD /* Likes.swift in Sources */,
 				256065BD1D40B274005EC41C /* MyPageContainerController.swift in Sources */,
+				254AB7911D545BFA003C8345 /* ArticlesReducer.swift in Sources */,
+				254AB7971D549620003C8345 /* MarbleAPIReducer.swift in Sources */,
 				255EBD561D1F9C3F00D45A89 /* ArticleViewModel.swift in Sources */,
 				255EBD311D1F801000D45A89 /* AppDelegate.swift in Sources */,
 				250E0A941D229696005F6130 /* ArticleCell.swift in Sources */,
