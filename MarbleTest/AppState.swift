@@ -8,16 +8,8 @@
 
 import ReSwift
 
-//struct AppState: StateType {
-//    var counter: Int = 0
-//}
-
 struct AppState: StateType {
-//    var navigationState = NavigationState()
-//    var marbleAPIState = MarticleAPIState()
+
     var article = ArticlesState()
-//    var marbleSceneState = SearchMarbleSceneState()
-    
-//    init() {
-//    }
+
 }

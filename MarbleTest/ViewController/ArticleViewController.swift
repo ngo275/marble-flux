@@ -32,6 +32,7 @@ class ArticleViewController: UIViewController {
         title = "MARBLE"
         
         load()
+        store.subscribe(self)
         initTableView()
         
     }
@@ -61,7 +62,7 @@ class ArticleViewController: UIViewController {
         viewmodel.fetchArticleList(params)
             .onSuccess { [weak self] data in
                 self?.articles = data.1
-                self?.tableView.reloadData()
+                store.dispatch(ArticlesState.ResponseGetArticles(articles: data.1))
             }
             .onFailure { [weak self] error in
                 self?.showErrorAlert(error.localizedDescription, completion: nil)
@@ -71,8 +72,6 @@ class ArticleViewController: UIViewController {
     private func initTableView() {
         tableView.registerNib(UINib(nibName: "ArticleCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
         // dataSource and delegate are connected to this class in the storyboard.
-        // tableView.dataSource = self
-        // tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 105.0
 //        tableView.showPullToRefresh = true
@@ -81,16 +80,6 @@ class ArticleViewController: UIViewController {
 //        }
 
     }
-
-        /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
 extension ArticleViewController: UITableViewDelegate, UITableViewDataSource {
@@ -112,6 +101,16 @@ extension ArticleViewController: UITableViewDelegate, UITableViewDataSource {
             next.article = articles![indexPath.row]
             navigationController?.pushViewController(next, animated: true)
         }
+    }
+}
+
+extension ArticleViewController: StoreSubscriber {
+    func newState(state: AppState) {
+        if state.article.fetchStatus != .Fetching {
+            //            refreshControl?.endRefreshing()
+        }
+        self.articles = state.article.articles
+        tableView.reloadData()
     }
 }
 

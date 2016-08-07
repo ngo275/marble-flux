@@ -8,13 +8,8 @@ import Foundation
 import Result
 
 struct ArticlesState {
-//    var searchResult: Result<[Article]>?
     var fetchStatus: FetchStatus = .Initial
     var articles: [Article]?
     var error: NSError?
     var maxId: String?
 }
-
-//protocol HasArticleAPIState {
-//    var marbleAPIState: MarbleAPIState { get set }
-//}

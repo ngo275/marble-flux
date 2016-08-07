@@ -8,26 +8,11 @@
 
 import ReSwift
 
-//struct CounterReducer: Reducer {
-//    
-//    typealias ReducerStateType = AppState
-//    
-//    func handleAction(action: Action, state: ReducerStateType?) -> ReducerStateType {
-//        switch action {
-//        case _ as CountActionIncrease: return AppState(counter: state.map { $0.counter + 1 } ?? 0)
-//        case _ as CountActionDecrease: return AppState(counter: state.map { $0.counter - 1 } ?? 0)
-//        default: return AppState(counter: 0)
-//        }
-//    }
-//    
-//}
-
 extension ArticlesState {
     struct Reducer: ReSwift.Reducer {
         typealias ReducerStateType = AppState
         func handleAction(action: Action, state: ReducerStateType?) -> ReducerStateType {
             let prevState = state ?? AppState()
-            let prevArticleState = prevState.article
             var nextState = prevState
             var nextArticleState = nextState.article
             

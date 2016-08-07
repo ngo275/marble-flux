@@ -20,10 +20,8 @@
 		254AB7821D544EAC003C8345 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254AB7811D544EAC003C8345 /* ReSwift.framework */; };
 		254AB78B1D545847003C8345 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB78A1D545847003C8345 /* AppState.swift */; };
 		254AB78D1D5458DA003C8345 /* StoreCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB78C1D5458DA003C8345 /* StoreCreator.swift */; };
-		254AB78F1D545B94003C8345 /* TimelineAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB78E1D545B94003C8345 /* TimelineAction.swift */; };
 		254AB7911D545BFA003C8345 /* ArticlesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB7901D545BFA003C8345 /* ArticlesReducer.swift */; };
 		254AB7951D5494F6003C8345 /* ArticlesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB7941D5494F6003C8345 /* ArticlesAction.swift */; };
-		254AB7971D549620003C8345 /* MarbleAPIReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB7961D549620003C8345 /* MarbleAPIReducer.swift */; };
 		254AB7991D549654003C8345 /* ArticlesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB7981D549654003C8345 /* ArticlesState.swift */; };
 		254AB79B1D55752E003C8345 /* FetchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AB79A1D55752E003C8345 /* FetchStatus.swift */; };
 		254CBDFC1D522D7F0083DC41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254CBDFB1D522D7F0083DC41 /* Main.storyboard */; };
@@ -72,10 +70,8 @@
 		254AB7811D544EAC003C8345 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		254AB78A1D545847003C8345 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		254AB78C1D5458DA003C8345 /* StoreCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCreator.swift; sourceTree = "<group>"; };
-		254AB78E1D545B94003C8345 /* TimelineAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineAction.swift; sourceTree = "<group>"; };
 		254AB7901D545BFA003C8345 /* ArticlesReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesReducer.swift; sourceTree = "<group>"; };
 		254AB7941D5494F6003C8345 /* ArticlesAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesAction.swift; sourceTree = "<group>"; };
-		254AB7961D549620003C8345 /* MarbleAPIReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarbleAPIReducer.swift; sourceTree = "<group>"; };
 		254AB7981D549654003C8345 /* ArticlesState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesState.swift; sourceTree = "<group>"; };
 		254AB79A1D55752E003C8345 /* FetchStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchStatus.swift; sourceTree = "<group>"; };
 		254CBDFB1D522D7F0083DC41 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -146,7 +142,6 @@
 		254AB7861D5456E8003C8345 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				254AB78E1D545B94003C8345 /* TimelineAction.swift */,
 				254AB7941D5494F6003C8345 /* ArticlesAction.swift */,
 			);
 			name = Actions;
@@ -156,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				254AB7901D545BFA003C8345 /* ArticlesReducer.swift */,
-				254AB7961D549620003C8345 /* MarbleAPIReducer.swift */,
 			);
 			name = Reducers;
 			sourceTree = "<group>";
@@ -398,7 +392,6 @@
 			files = (
 				254AB78D1D5458DA003C8345 /* StoreCreator.swift in Sources */,
 				255EBD541D1F9BF700D45A89 /* Article.swift in Sources */,
-				254AB78F1D545B94003C8345 /* TimelineAction.swift in Sources */,
 				255EBD5E1D1FA0D800D45A89 /* APIManager.swift in Sources */,
 				255EBD501D1F9BB500D45A89 /* User.swift in Sources */,
 				254AB78B1D545847003C8345 /* AppState.swift in Sources */,
@@ -422,7 +415,6 @@
 				251612DF1D48B36D007B8EDD /* Likes.swift in Sources */,
 				256065BD1D40B274005EC41C /* MyPageContainerController.swift in Sources */,
 				254AB7911D545BFA003C8345 /* ArticlesReducer.swift in Sources */,
-				254AB7971D549620003C8345 /* MarbleAPIReducer.swift in Sources */,
 				255EBD561D1F9C3F00D45A89 /* ArticleViewModel.swift in Sources */,
 				255EBD311D1F801000D45A89 /* AppDelegate.swift in Sources */,
 				250E0A941D229696005F6130 /* ArticleCell.swift in Sources */,
