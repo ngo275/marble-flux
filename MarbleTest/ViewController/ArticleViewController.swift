@@ -14,14 +14,14 @@ import ReSwift
 
 class ArticleViewController: UIViewController {
     
-    private let viewmodel = ArticleViewModel()
+//    private let viewmodel = ArticleViewModel()
     private let apiManager: APIManager = APIManager.sharedInstance
     private var articles: [Article]? {
         get {
-            return viewmodel.articles
+            return apiManager.articles
         }
         set(newValue) {
-            viewmodel.articles = newValue
+            apiManager.articles = newValue
         }
     }
     
@@ -59,7 +59,7 @@ class ArticleViewController: UIViewController {
             "limit": 10,
             //            "category_id": categoryId
         ]
-        viewmodel.fetchArticleList(params)
+        apiManager.fetchArticleList(params)
             .onSuccess { [weak self] data in
                 self?.articles = data.1
                 store.dispatch(ArticlesState.ResponseGetArticles(articles: data.1))

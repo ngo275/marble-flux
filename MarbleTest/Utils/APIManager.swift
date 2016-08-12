@@ -14,6 +14,7 @@ import BrightFutures
 class APIManager: NSObject {
     
     static let sharedInstance = APIManager()
+    var articles: [Article]?
     
     func get<T: ResponseSerializerType>(url: URLStringConvertible, params: [String: AnyObject], serializer: T) -> Future<T.SerializedObject, T.ErrorObject> {
         let promise = Promise<T.SerializedObject, T.ErrorObject>()
@@ -33,7 +34,19 @@ class APIManager: NSObject {
         return promise.future
     }
 
+    func fetchArticleList(params: [String: AnyObject]) -> Future<(Int,[Article]), NSError>  {
+        let serializer = ArticleSerializer()
+        let url = APIUrl.articleList
+        return get(url, params: params, serializer: serializer)
+    }
     
-    
+    private func mergeArticles(articles: [Article]) -> [Article] {
+        if let _ = self.articles {
+            let newArticles = self.articles! + articles
+            return newArticles
+        } else {
+            return articles
+        }
+    }
     
 }
