@@ -21,6 +21,13 @@ extension ArticlesState {
     struct ErrorGetArticles: Action {
         let error: NSError
     }
+    struct LikeArticle: Action {
+        let article: Article?
+    }
+    struct UnLikeArticle: Action {
+        let article: Article?
+    }
+    struct ResponseGetLikedArticles: Action {}
 }
 
 

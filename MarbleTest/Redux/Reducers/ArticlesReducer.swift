@@ -7,6 +7,7 @@
 //
 
 import ReSwift
+import RealmSwift
 
 extension ArticlesState {
     struct Reducer: ReSwift.Reducer {
@@ -19,27 +20,25 @@ extension ArticlesState {
             switch action {
             case is RequestGetArticles:
                 nextArticleState.fetchStatus = .Fetching
+
             case let action as ResponseGetArticles:
                 nextArticleState.fetchStatus = .Success
-//                nextArticleState.tweets = prevArticleState.fetchStatus == .Refresh ? action.tweets : TweetsReducerHelper.mergeTweets(prevTimeineState.tweets, nextTweets: action.tweets)
-//                nextTimelineState.sinceId = nextTimelineState.tweets?.first?.tweetID
                 nextArticleState.articles = action.articles
                 nextArticleState.maxId = String(nextArticleState.articles?.last?.id)
                 
             case let action as ErrorGetArticles:
                 nextArticleState.fetchStatus = .Error
                 nextArticleState.error = action.error
+            
+            case let action as LikeArticle:
+                LikesUtils.like(Int32(action.article!.id), data: action.article!.toJson())
+            
+            case let action as UnLikeArticle:
+                LikesUtils.unlike(Int32(action.article!.id))
                 
-//            case let action as LikedTweetsState.ResponsePostLikeAction:
-//                if let tweets = nextTimelineState.tweets {
-//                    nextTimelineState.tweets = TweetsReducerHelper.updateLikedTweet(tweets, likedTweet: action.tweet)
-//                }
-//                
-//            case let action as LikedTweetsState.ResponseDeleteLikeAction:
-//                if let tweets = nextTimelineState.tweets {
-//                    nextTimelineState.tweets = TweetsReducerHelper.updateLikedTweet(tweets, likedTweet: action.tweet)
-//                }
-                
+            case is ResponseGetLikedArticles:
+                nextArticleState.likedArticles = LikesUtils.list(0, limit: 20).map {Article(json: $0)}
+                                
             default:
                 break
             }

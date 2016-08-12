@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import WebImage
+import ReSwift
 
 class ArticleDetailViewController: UIViewController {
 
@@ -22,11 +23,11 @@ class ArticleDetailViewController: UIViewController {
         let like = !LikesUtils.isLike(Int32(article!.id))
         if like {
             // when the article's not liked yet.
-            LikesUtils.like(Int32(article!.id), data: article!.toJson())
+            store.dispatch(ArticlesState.LikeArticle(article: article))
             print("Like: \(article!.id)")
         } else {
             // when the article's liked already.
-            LikesUtils.unlike(Int32(article!.id))
+            store.dispatch(ArticlesState.UnLikeArticle(article: article))
             print("Unlike: \(article!.id)")
         }
     }
@@ -44,15 +45,5 @@ class ArticleDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

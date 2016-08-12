@@ -14,7 +14,6 @@ import ReSwift
 
 class ArticleViewController: UIViewController {
     
-//    private let viewmodel = ArticleViewModel()
     private let apiManager: APIManager = APIManager.sharedInstance
     private var articles: [Article]? {
         get {
@@ -33,7 +32,6 @@ class ArticleViewController: UIViewController {
         
         load()
         store.subscribe(self)
-        initTableView()
         
     }
 
@@ -110,6 +108,7 @@ extension ArticleViewController: StoreSubscriber {
             //            refreshControl?.endRefreshing()
         }
         self.articles = state.article.articles
+        initTableView()
         tableView.reloadData()
     }
 }

@@ -20,7 +20,6 @@ let loggingMiddleware: Middleware = { dispatch, getState in
 let reducers = CombinedReducer([
 //    AuthSessionState.Reducer(),
     ArticlesState.Reducer(),
-//    LikedTweetsState.Reducer()
 ])
 
 

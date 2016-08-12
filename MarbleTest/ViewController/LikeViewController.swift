@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import RealmSwift
+import ReSwift
 
 class LikeViewController: UIViewController {
     
@@ -22,9 +23,8 @@ class LikeViewController: UIViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
-        self.articles = LikesUtils.list(0, limit: 20).map {Article(json: $0)}
-        initTableView()
-        tableView.reloadData()
+        store.subscribe(self)
+        store.dispatch(ArticlesState.ResponseGetLikedArticles())
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,23 +42,12 @@ class LikeViewController: UIViewController {
         //            self?.load()
         //        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
 extension LikeViewController: UITableViewDelegate, UITableViewDataSource {
-    // MARK: UITableViewDelegate
+    
+    // MARK: - UITableViewDelegate
     
     func scrollViewShouldScrollToTop(scrollView: UIScrollView) -> Bool {
         return true
@@ -70,20 +59,24 @@ extension LikeViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
+    
     // return the number of tableCells
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles?.count ?? 0
     }
+    
     // return the height of each cell
     //    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     //        return 84
     //    }
+    
     // draw the tableCells
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: ArticleCell = tableView.dequeueReusableCellWithIdentifier("ArticleCell") as! ArticleCell
         cell.setCell(articles![indexPath.row])
         return cell
     }
+    
     // action when a cell is tapped
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let storyboard: UIStoryboard = UIStoryboard(name: "ArticleDetail", bundle: nil)
@@ -91,6 +84,17 @@ extension LikeViewController: UITableViewDelegate, UITableViewDataSource {
             next.article = articles![indexPath.row]
             navigationController?.pushViewController(next, animated: true)
         }
+    }
+}
+
+extension LikeViewController: StoreSubscriber {
+    
+    // MARK: - StoreSubscriber
+    
+    func newState(state: AppState) {
+        articles = state.article.likedArticles
+        initTableView()
+        tableView.reloadData()
     }
 }
 

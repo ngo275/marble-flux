@@ -12,4 +12,5 @@ struct ArticlesState {
     var articles: [Article]?
     var error: NSError?
     var maxId: String?
+    var likedArticles: [Article]?
 }
